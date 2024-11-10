@@ -1,3 +1,5 @@
+
+
 /*--------------------
 Vars
 --------------------*/
@@ -85,6 +87,15 @@ const handleMouseUp = () => {
   isDown = false;
 };
 
+
+const carouselItems = document.querySelectorAll('.carousel-item');
+carouselItems.forEach(item => {
+    item.addEventListener('click', () => {
+        carouselItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+    });
+});
+
 /*--------------------
 Listeners
 --------------------*/
@@ -95,3 +106,4 @@ document.addEventListener("mouseup", handleMouseUp);
 document.addEventListener("touchstart", handleMouseDown);
 document.addEventListener("touchmove", handleMouseMove);
 document.addEventListener("touchend", handleMouseUp);
+

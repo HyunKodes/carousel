@@ -30,12 +30,13 @@ body {
     top: 50%;
     left: 50%;
     user-select: none;
-    transform-origin: 0% 100%;
+    transform-origin: 0% 125%;
     box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
     background: black;
     pointer-events: all;
     transform: translate(var(--x), var(--y)) rotate(var(--rot));
-    transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
+    /* transition: transform .8s cubic-bezier(0, 0.02, 0, 1); */
+    transition: transform .8s cubic-bezier(0, 0.02, 0, 1), width .8s cubic-bezier(0, 0.02, 0, 1), height .8s cubic-bezier(0, 0.02, 0, 1);
 
     .carousel-box {
         position: absolute;
@@ -74,7 +75,7 @@ body {
     .num {
         position: absolute;
         z-index: 1;
-        color: #fff;
+        color: #fffffff7;
         top: 10px;
         left: 20px;
         transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
@@ -177,7 +178,7 @@ body {
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, .2);
+    border: 2px solid rgba(255, 255, 255, .2);
     margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
     transition: transform .85s cubic-bezier(0, 0.02, 0, 1);
     display: none;
@@ -189,8 +190,8 @@ body {
 }
 
 .cursor2 {
-    --size: 2px;
-    transition-duration: .7s;
+    --size: 3px;
+    transition-duration: .5s;
 }
 
 
